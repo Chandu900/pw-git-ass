@@ -4,91 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login form</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
         body {
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         
         .container {
+            background-color: black;
+            width: 600px;
+            height: fit-content;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 600px;
-            height: 400px;
-            background-color: rgb(238, 235, 235);
+            padding: 10px 20px;
         }
         
         .iner-box {
-            background-color: #fff;
-            box-sizing: border-box;
+            min-width: 400px;
             width: 400px;
-            height: 300px;
-            box-shadow: 3px 3px 3px #c8c5c5, -2px -3px 3px #c8c5c5;
-            border-radius: 10px;
-            padding: 40px;
-            /* display: flex;
-            flex-direction: column;
-            row-gap: 30px; */
+            background-color: #fff;
+            color: black;
+            padding: 80px 20px 50px;
         }
         
-        .iner-box input {
-            border: none;
-            -webkit-margin-collapse: collapse;
+        .iner-box div {
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        
+        input,
+        div,
+        .batch select {
             width: 100%;
         }
         
-        .iner-box input[type="text"],
-        input[type="password"] {
-            background-color: white;
-            padding-bottom: 30px;
-            margin-top: 10px;
-        }
-        
-        .iner-box .line {
-            height: 1.2px;
-            width: 100%;
-            background-color: rgb(91, 88, 88);
-            opacity: 0.8;
-        }
-        
-        .btn {
-            background-color: rgb(81, 81, 254);
-            text-align: center;
-            vertical-align: middle;
-            width: 100%;
-            height: 50px;
-            margin-top: 30px;
-            color: white;
-            font-size: large;
-            border-radius: 5px;
-            cursor: pointer;
-            opacity: 0.9;
-        }
-        
-        .btn:focus {
-            opacity: 1;
-        }
-        
-        .iner-box input:focus {
-            border: none;
-            outline: none;
+        #button {
+            background-color: black;
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container ">
         <div class="iner-box">
-            <h2 style="text-align: center; margin: 0;">Login</h2>
-            <input type="text" name="name" id="fName" placeholder="Username" autofocus>
-            <div class="line"></div>
-            <input type="password" name="password" id="Pass" placeholder="password">
-            <div class="line"></div>
-            <input class="btn" type="button" value="Submit">
+            <div class="signup" style="text-align: center; font-weight: 900; font-size: larger;"><span id="signup">SignUp</span></div>
+            <div> Name:
+                <br><input type="text" name="Name" id="fName">
+            </div>
+            <div class="batch"><br> Batch:
+                <br><select name="" id="">
+                        <option value="Batch2.0" >Batch2.0</option>
+                        <option value="Batch2.4" selected>Batch2.4</option>
+                    </select>
+            </div>
+            <div><br>Age:<br><input type="number" name="age" id="age"><br> Email:
+                <br><input type="email" name="email" id="">
+            </div>
+            <div><br>password:<br><input type="password" name="password" id="">
+            </div>
+            <div><input type="button" value="SignUp" id="button"></div>
+
         </div>
     </div>
 </body>
